@@ -106,7 +106,7 @@ zend_module_entry core_test_module_entry = {
  */
 PHP_FUNCTION(trigger_core_error)
 {
-    zend_error_noreturn(E_CORE_ERROR, "core error triggered from %s", function_name);
+    zend_error_noreturn(E_CORE_ERROR, "core error triggered from trigger_core_error");
 }
 /* }}} */
 
