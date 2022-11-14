@@ -1,0 +1,7 @@
+ARG_ENABLE('core_test', 'core_test support', 'no');
+
+if (PHP_CORE_TEST != 'no') {
+	AC_DEFINE('HAVE_CORE_TEST', 1, 'core_test support enabled');
+
+	EXTENSION('core_test', 'core_test.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
